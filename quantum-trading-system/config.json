@@ -1,0 +1,86 @@
+{
+    "alpaca_key": "Replace With Yours",
+    "alpaca_secret": "Replace With Yours",
+    "alpaca_url": "https://paper-api.alpaca.markets",
+    
+    "finnhub_api_key": "d50b11pr01qsabpsapmgd50b11pr01qsabpsapn0",
+    "alphavantage_api_key": "591G0L66ZYHKBACZ",
+    "twelvedata_api_key": "a580ceb650c746529fa32dc6048880ec",
+    
+    "newsapi_key": "2c5bca1a08424a3ea0317d8e7827cac9",
+    
+    "x_bearer_token": "AAAAAAAAAAAAAAAAAAAAADGQ7QEAAAAAmKg%2FK59SUBPApPb9CjwEEc5pQGw%3DV59Krg2zMawpfZZQyVrmzGIvhmfOvHviOOApfl1xFg1J7risVV",
+    "x_api_key": "89cuCavQhRzH3JQIyxEDJkut5",
+    "x_api_secret": "PUrrjKhA9g53eb6Gq9heuGnAPajgQtnIzxXieMaYa1R7ZpAsSR",
+    
+    "trading_mode": "live",
+    "initial_capital": 500,
+    
+    "_version": "9.3 NEWS SENTIMENT INTEGRATED",
+    "_strategy": "SWING TRADING with 6-layer protection",
+    "_pdt_compliant": true,
+    
+    "max_drawdown": 0.08,
+    "max_position_size": 0.25,
+    "swing_position_size": 0.20,
+    "max_positions": 3,
+    "min_confidence": 0.85,
+    
+    "swing_take_profit_pct": 0.035,
+    "swing_stop_loss_pct": 0.025,
+    "catastrophic_stop_pct": 0.05,
+    
+    "stop_loss_pct": 0.025,
+    "take_profit_pct": 0.035,
+    "trailing_stop_pct": 0.015,
+    "trailing_activation": 0.02,
+    
+    "daily_loss_limit_dollars": 5,
+    "daily_loss_limit_pct": 0.01,
+    "daily_loss_limit_enabled": true,
+    
+    "vix_no_trade_threshold": 35,
+    "vix_caution_threshold": 25,
+    
+    "ml_min_confidence": 0.80,
+    "ml_lookback": 20,
+    "ml_horizon": 5,
+    
+    "min_sources_agree": 2,
+    "min_aggregate_confidence": 0.80,
+    
+    "cooldown_minutes": 60,
+    "min_hold_minutes": 30,
+    "max_trades_per_stock": 2,
+    
+    "order_delay_seconds": 0.3,
+    "cycle_interval": 120,
+    
+    "strategies_enabled": ["momentum", "trend_following", "breakout", "ml_ensemble", "mean_reversion"],
+    
+    "strategy_weights": {
+        "trend_following": 0.30,
+        "momentum": 0.25,
+        "breakout": 0.20,
+        "ml_ensemble": 0.15,
+        "mean_reversion": 0.10
+    },
+    
+    "universe_type": "sp500",
+    "max_universe_size": 100,
+    "min_price": 15,
+    "max_price": 500,
+    
+    "enable_ml": true,
+    "log_level": "INFO",
+    
+    "pdt_state_file": "data/pdt_state.json",
+    
+    "_changes_v9.3": [
+        "min_price: 20 -> 15 (include more stocks)",
+        "max_price: 200 -> 500 (include AAPL, MSFT, AMZN)",
+        "min_confidence: 0.88 -> 0.85 (slightly relaxed)",
+        "min_sources_agree: 3 -> 2 (easier to qualify)",
+        "swing_strategy uses data_manager for reliability"
+    ]
+}
